@@ -1,0 +1,6 @@
+button{
+    &:disabled{
+        background: #eee !important;
+        cursor: not-allowed !important;
+    }
+}
