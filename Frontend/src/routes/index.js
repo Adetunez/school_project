@@ -5,4 +5,5 @@ export const ROUTES = {
   DASHBOARD: "/dashboard",
   PAYMENTS: "/payment",
   PROFILE: "/profile",
+  CART:"/cart"
 };

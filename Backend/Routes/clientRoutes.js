@@ -22,12 +22,12 @@ router.post(
 
 router.get(
   `${BaseUrl.client}/get/all-products`,
-  authMiddleware,
+  // authMiddleware,
   userController.getAllProducts
 );
 router.get(
   `${BaseUrl.client}/get/product`,
-  authMiddleware,
+  // authMiddleware,
   userController.getProduct
 );
 

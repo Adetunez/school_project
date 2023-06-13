@@ -44,7 +44,9 @@ const Index = () => {
             </Link>
           </li>
           <li>
-            <BiCartAlt /> Cart
+          <Link to='/cart'>
+          <BiCartAlt /> Cart
+          </Link>
           </li>
         </ul>
       </div>

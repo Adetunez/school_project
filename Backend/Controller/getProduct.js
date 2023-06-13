@@ -6,6 +6,7 @@ const getAllProducts = async (req, res) => {
   const products = await ProductModel.find({}).populate("farmer");
   const results = paginatedData(products, page);
   res.status(200).send(results);
+  console.log(results.payload)
 };
 
 const getProduct = async (req, res) => {

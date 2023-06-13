@@ -6,6 +6,8 @@ const AddProduct = async (req, res) => {
     req.body;
   try {
     const farmer = await User.findOne({ email: farmerEmail });
+    const data = req.user
+
     const newProduct = new ProductModel({
       title,
       category,
@@ -13,7 +15,7 @@ const AddProduct = async (req, res) => {
       quantity,
       status,
       image,
-      farmer: farmer._id,
+      farmer:data._id ,
     });
     const savedModel = await newProduct.save();
     if (savedModel) {
@@ -27,6 +29,7 @@ const AddProduct = async (req, res) => {
     return res.send({
       status: false,
       message: `Oops an error Occured -${error}`,
+      
     });
   }
 };

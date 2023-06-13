@@ -20,16 +20,16 @@ const Login = () => {
       email,
       password,
     };
-    await userOBJ.user_login(payload).then((res) => {
-      if (res.status) {
-        toast.success(res.message);
+    // await userOBJ.user_login(payload).then((res) => {
+    //   if (res.status) {
+    //     toast.success(res.message);
         window.location.replace("/dashboard");
-      } else {
-        toast.error(res.message);
-        setLoading(false);
-        return;
-      }
-    });
+    //   } else {
+    //     toast.error(res.message);
+    //     setLoading(false);
+    //     return;
+    //   }
+    // });
   };
   return (
     <div className="login">

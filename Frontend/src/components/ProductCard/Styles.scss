@@ -39,3 +39,14 @@
     margin: 100px auto;
     // margin-left: -20px;
 }
+.submit{
+    background-color: darkgreen;
+    color: #fff;
+    font-weight:700;
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 0;
+}
+.submit:hover{
+    background-color: darkolivegreen;
+}

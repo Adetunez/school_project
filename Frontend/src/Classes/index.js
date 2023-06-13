@@ -93,6 +93,7 @@ class USER {
   get_all_products = async (page) => {
     try {
       const response = await api.get(`/get/all-products?page=${page}`);
+      // const response = await api.get(`/get/all-products`); 
       return response;
     } catch (error) {
       return error;
@@ -101,7 +102,7 @@ class USER {
   get_product = async (page, id) => {
     try {
       const response = await api.get(
-        `/get/product?page=${page}&farmerId=${id}`
+        `/get/product?page=${page}&farmerId=${id}` 
       );
       return response;
     } catch (error) {

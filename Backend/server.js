@@ -5,7 +5,7 @@ const sgMail = require("@sendgrid/mail");
 const cors = require("cors");
 const app = express();
 require("dotenv").config();
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+// sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const clientRoutes = require("./Routes/clientRoutes");
 const connection_string =
   process.env.ENVIRONMENT === "production"
@@ -17,20 +17,20 @@ const PORT = process.env.ENVIRONMENT === "production" ? process.env.PORT : 4000;
 mongoose.set("strictQuery", true);
 
 mongoose
-  .connect(connection_string, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    // useCreateIndex: true,
-  })
-  // Start server only if connected to database
-  .then(() => {
-    app.listen(PORT, async () => {
-      console.log("Chriscrown server started on port", PORT);
-    });
-  })
-  .catch((e) => {
-    console.log(e.message);
-  });
+	.connect('mongodb+srv://Tega:tega1234@farm.7bukijn.mongodb.net/?retryWrites=true&w=majority', {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+		// useCreateIndex: true,
+	})
+	// Start server only if connected to database
+	.then(() => {
+		app.listen(PORT, async () => {
+			console.log('Chriscrown server started on port', PORT);
+		});
+	})
+	.catch((e) => {
+		console.log(e.message);
+	});
 //=================Server settings ==================
 app.use(express.json());
 app.use(cookieParser());
