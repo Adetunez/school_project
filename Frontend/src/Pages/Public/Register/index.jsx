@@ -35,17 +35,17 @@ const Register = () => {
       role,
       gender,
     };
-    await userOBJ.user_signup(payload).then((res) => {
-      console.log(res);
-      if (res.status) {
-        toast.success(res.message);
-        window.location.replace("/dashboard");
-      } else {
-        toast.error(res.message);
-        setLoading(false);
-        return;
-      }
-    });
+    // await userOBJ.user_signup(payload).then((res) => {
+    //   console.log(res);
+    //   if (res.status) {
+    //     toast.success(res.message);
+        window.location.replace("/login");
+  //     } else {
+  //       toast.error(res.message);
+  //       setLoading(false);
+  //       return;
+  //     }
+  //   });
   };
   return (
     <div className="register">

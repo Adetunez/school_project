@@ -20,7 +20,7 @@ const Dashboard = () => {
 	const [loading, setLoading] = useState(false);
 	const [imageLoading, setImageLoading] = useState(true);
 	const [data, setData] = useState([]);
-	const { role, _id, email } = getClient();
+	const [role, setRole] = useState('farmer');
 
 	const titleRef = useRef()
 	const categoryRef = useRef()
@@ -68,7 +68,6 @@ const Dashboard = () => {
 			price,
 			image,
 			quantity,
-			farmerEmail: email,
 		};
 
 
